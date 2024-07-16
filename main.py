@@ -18,4 +18,7 @@ weather_data = response.json()
 for hour_data in weather_data["list"]:
     con_code = hour_data["weather"][0]["id"]
     if int(con_code) < 700:
-        print("Bring an Umbrella")
+        will_rain = True
+
+if will_rain:
+    print("Bring an Umbrella")
